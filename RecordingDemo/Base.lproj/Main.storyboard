@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="2aP-i1-1LA">
+                                <rect key="frame" x="127" y="164" width="122" height="340"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kic-rz-xAG">
+                                        <rect key="frame" x="0.0" y="0.0" width="122" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="开始录音"/>
+                                        <connections>
+                                            <action selector="recording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="49g-J1-LZr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvB-md-iVf">
+                                        <rect key="frame" x="0.0" y="73" width="122" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="结束录音"/>
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HQa-nH-NqU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWX-hN-6Uz">
+                                        <rect key="frame" x="0.0" y="146" width="122" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="暂停录音"/>
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vRS-Kf-yVR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aN6-YB-Gri">
+                                        <rect key="frame" x="0.0" y="219" width="122" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="播放录音"/>
+                                        <connections>
+                                            <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gfw-qb-rtp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuX-eu-Wyz">
+                                        <rect key="frame" x="0.0" y="292" width="122" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="压缩"/>
+                                        <connections>
+                                            <action selector="upload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D3b-Kl-byK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="录制中..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIa-0K-d21">
+                                <rect key="frame" x="16" y="642" width="343" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.95686274510000002" green="0.17313818306844447" blue="0.39475853258525168" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OIa-0K-d21" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6A8-wd-2oS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OIa-0K-d21" secondAttribute="bottom" constant="8" symbolic="YES" id="FZF-yy-pe3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OIa-0K-d21" secondAttribute="trailing" id="G5k-lR-vPt"/>
+                            <constraint firstItem="OIa-0K-d21" firstAttribute="centerX" secondItem="2aP-i1-1LA" secondAttribute="centerX" id="YGV-2y-Q4n"/>
+                            <constraint firstItem="2aP-i1-1LA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pcA-51-OPd"/>
+                            <constraint firstItem="2aP-i1-1LA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qdg-3n-uoj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="begin" destination="Kic-rz-xAG" id="gUH-D6-MoN"/>
+                        <outlet property="display" destination="OIa-0K-d21" id="3rC-yr-JEh"/>
+                        <outlet property="end" destination="jvB-md-iVf" id="KPZ-Ls-fdp"/>
+                        <outlet property="play" destination="aN6-YB-Gri" id="JVu-f5-F4V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-167" y="-113"/>
+        </scene>
+    </scenes>
+</document>
